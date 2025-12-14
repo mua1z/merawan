@@ -97,12 +97,59 @@
             background-color: var(--accent-green);
         }
         
-        /* Language Switcher */
-        .lang-switcher {
-            position: fixed;
-            top: 1rem;
-            right: 1rem;
+        /* Language Dropdown */
+        .lang-dropdown {
+            position: relative;
+        }
+        
+        .lang-dropdown-menu {
+            position: absolute;
+            top: 100%;
+            right: 0;
+            margin-top: 0.5rem;
+            background: white;
+            border-radius: 0.5rem;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            min-width: 120px;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: all 0.3s ease;
             z-index: 1000;
+        }
+        
+        .lang-dropdown.active .lang-dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+        
+        .lang-dropdown-item {
+            display: block;
+            padding: 0.75rem 1rem;
+            color: #1e3a8a;
+            text-decoration: none;
+            transition: background-color 0.2s;
+            cursor: pointer;
+        }
+        
+        .lang-dropdown-item:hover {
+            background-color: #f3f4f6;
+        }
+        
+        .lang-dropdown-item.active {
+            background-color: #2563eb;
+            color: white;
+        }
+        
+        .lang-dropdown-item:first-child {
+            border-top-left-radius: 0.5rem;
+            border-top-right-radius: 0.5rem;
+        }
+        
+        .lang-dropdown-item:last-child {
+            border-bottom-left-radius: 0.5rem;
+            border-bottom-right-radius: 0.5rem;
         }
         
         /* Smooth Scroll Behavior */
@@ -142,21 +189,15 @@
     </style>
 </head>
 <body class="bg-white">
-    <!-- Language Switcher -->
-    <div class="lang-switcher">
-        <div class="flex space-x-1 bg-white rounded-lg shadow-lg p-1">
-            <button id="lang-en" class="lang-btn px-3 py-1 rounded-md bg-blue-600 text-white font-medium" data-lang="en">EN</button>
-            <button id="lang-om" class="lang-btn px-3 py-1 rounded-md hover:bg-gray-100 transition" data-lang="om">OM</button>
-            <button id="lang-am" class="lang-btn px-3 py-1 rounded-md hover:bg-gray-100 transition" data-lang="am">AM</button>
-        </div>
-    </div>
-
     <!-- Navigation -->
     <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md shadow-sm">
         <div class="container mx-auto px-6 py-4">
             <div class="flex justify-between items-center">
+                <!-- Logo/Brand -->
                 <div class="text-xl font-bold text-blue-900">Merawan Mohammed</div>
-                <div class="hidden md:flex space-x-8">
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-8">
                     <a href="#home" class="nav-link text-blue-900 hover:text-green-700 font-medium transition">Home</a>
                     <a href="#profile" class="nav-link text-blue-900 hover:text-green-700 font-medium transition">Profile</a>
                     <a href="#experience" class="nav-link text-blue-900 hover:text-green-700 font-medium transition">Experience</a>
@@ -164,20 +205,66 @@
                     <a href="#competencies" class="nav-link text-blue-900 hover:text-green-700 font-medium transition">Competencies</a>
                     <a href="#vision" class="nav-link text-blue-900 hover:text-green-700 font-medium transition">Vision</a>
                     <a href="#contact" class="nav-link text-blue-900 hover:text-green-700 font-medium transition">Contact</a>
+                    
+                    <!-- Language Dropdown -->
+                    <div class="lang-dropdown">
+                        <button id="lang-dropdown-btn" class="flex items-center space-x-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition font-medium">
+                            <i class="fas fa-globe"></i>
+                            <span id="lang-current">EN</span>
+                            <i class="fas fa-chevron-down text-sm"></i>
+                        </button>
+                        <div class="lang-dropdown-menu">
+                            <a href="#" class="lang-dropdown-item active" data-lang="en" id="lang-option-en">
+                                <i class="fas fa-check mr-2"></i> English
+                            </a>
+                            <a href="#" class="lang-dropdown-item" data-lang="om" id="lang-option-om">
+                                <i class="fas fa-check mr-2 hidden"></i> Oromo
+                            </a>
+                            <a href="#" class="lang-dropdown-item" data-lang="am" id="lang-option-am">
+                                <i class="fas fa-check mr-2 hidden"></i> አማርኛ
+                            </a>
+                        </div>
+                    </div>
                 </div>
-                <button id="mobile-menu-btn" class="md:hidden text-blue-900">
-                    <i class="fas fa-bars text-xl"></i>
-                </button>
+                
+                <!-- Mobile Menu Button & Language Dropdown -->
+                <div class="flex items-center space-x-4 md:hidden">
+                    <!-- Language Dropdown for Mobile -->
+                    <div class="lang-dropdown">
+                        <button id="lang-dropdown-btn-mobile" class="flex items-center space-x-1 px-3 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition text-sm">
+                            <i class="fas fa-globe"></i>
+                            <span id="lang-current-mobile">EN</span>
+                            <i class="fas fa-chevron-down text-xs"></i>
+                        </button>
+                        <div class="lang-dropdown-menu">
+                            <a href="#" class="lang-dropdown-item active" data-lang="en" id="lang-option-en-mobile">
+                                <i class="fas fa-check mr-2"></i> English
+                            </a>
+                            <a href="#" class="lang-dropdown-item" data-lang="om" id="lang-option-om-mobile">
+                                <i class="fas fa-check mr-2 hidden"></i> Oromo
+                            </a>
+                            <a href="#" class="lang-dropdown-item" data-lang="am" id="lang-option-am-mobile">
+                                <i class="fas fa-check mr-2 hidden"></i> አማርኛ
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Mobile Menu Icon -->
+                    <button id="mobile-menu-btn" class="text-blue-900 hover:text-green-700 transition">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
             </div>
+            
             <!-- Mobile Menu -->
-            <div id="mobile-menu" class="hidden md:hidden mt-4 space-y-3">
-                <a href="#home" class="block nav-link text-blue-900 hover:text-green-700 font-medium transition">Home</a>
-                <a href="#profile" class="block nav-link text-blue-900 hover:text-green-700 font-medium transition">Profile</a>
-                <a href="#experience" class="block nav-link text-blue-900 hover:text-green-700 font-medium transition">Experience</a>
-                <a href="#initiatives" class="block nav-link text-blue-900 hover:text-green-700 font-medium transition">Initiatives</a>
-                <a href="#competencies" class="block nav-link text-blue-900 hover:text-green-700 font-medium transition">Competencies</a>
-                <a href="#vision" class="block nav-link text-blue-900 hover:text-green-700 font-medium transition">Vision</a>
-                <a href="#contact" class="block nav-link text-blue-900 hover:text-green-700 font-medium transition">Contact</a>
+            <div id="mobile-menu" class="hidden md:hidden mt-4 space-y-3 pb-4">
+                <a href="#home" class="block nav-link text-blue-900 hover:text-green-700 font-medium transition py-2">Home</a>
+                <a href="#profile" class="block nav-link text-blue-900 hover:text-green-700 font-medium transition py-2">Profile</a>
+                <a href="#experience" class="block nav-link text-blue-900 hover:text-green-700 font-medium transition py-2">Experience</a>
+                <a href="#initiatives" class="block nav-link text-blue-900 hover:text-green-700 font-medium transition py-2">Initiatives</a>
+                <a href="#competencies" class="block nav-link text-blue-900 hover:text-green-700 font-medium transition py-2">Competencies</a>
+                <a href="#vision" class="block nav-link text-blue-900 hover:text-green-700 font-medium transition py-2">Vision</a>
+                <a href="#contact" class="block nav-link text-blue-900 hover:text-green-700 font-medium transition py-2">Contact</a>
             </div>
         </div>
     </nav>
@@ -817,15 +904,30 @@
         function switchLanguage(lang) {
             currentLang = lang;
             
-            // Update active language button
-            document.querySelectorAll('.lang-btn').forEach(btn => {
-                if (btn.dataset.lang === lang) {
-                    btn.classList.add('bg-blue-600', 'text-white');
-                    btn.classList.remove('hover:bg-gray-100', 'text-gray-700');
+            // Update current language display
+            const langNames = { en: 'EN', om: 'OM', am: 'AM' };
+            const langCurrent = document.getElementById('lang-current');
+            const langCurrentMobile = document.getElementById('lang-current-mobile');
+            if (langCurrent) langCurrent.textContent = langNames[lang];
+            if (langCurrentMobile) langCurrentMobile.textContent = langNames[lang];
+            
+            // Update active language dropdown items
+            document.querySelectorAll('.lang-dropdown-item').forEach(item => {
+                const itemLang = item.dataset.lang;
+                const checkIcon = item.querySelector('i.fa-check');
+                
+                if (itemLang === lang) {
+                    item.classList.add('active');
+                    if (checkIcon) checkIcon.classList.remove('hidden');
                 } else {
-                    btn.classList.remove('bg-blue-600', 'text-white');
-                    btn.classList.add('hover:bg-gray-100', 'text-gray-700');
+                    item.classList.remove('active');
+                    if (checkIcon) checkIcon.classList.add('hidden');
                 }
+            });
+            
+            // Close dropdown after selection
+            document.querySelectorAll('.lang-dropdown').forEach(dropdown => {
+                dropdown.classList.remove('active');
             });
             
             // Update all elements with lang-element class
@@ -837,27 +939,81 @@
             });
         }
         
-        // Language switcher event listeners
-        document.querySelectorAll('.lang-btn').forEach(btn => {
-            btn.addEventListener('click', () => {
-                const lang = btn.dataset.lang;
-                switchLanguage(lang);
-            });
-        });
-        
         // Initialize language
         document.addEventListener('DOMContentLoaded', () => {
             switchLanguage('en');
+            
+            // Language dropdown functionality
+            const langDropdownBtn = document.getElementById('lang-dropdown-btn');
+            const langDropdown = langDropdownBtn?.closest('.lang-dropdown');
+            
+            const langDropdownBtnMobile = document.getElementById('lang-dropdown-btn-mobile');
+            const langDropdownMobile = langDropdownBtnMobile?.closest('.lang-dropdown');
+            
+            // Toggle dropdown on button click
+            if (langDropdownBtn) {
+                langDropdownBtn.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    langDropdown?.classList.toggle('active');
+                    // Close mobile dropdown if open
+                    if (langDropdownMobile) {
+                        langDropdownMobile.classList.remove('active');
+                    }
+                });
+            }
+            
+            if (langDropdownBtnMobile) {
+                langDropdownBtnMobile.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    langDropdownMobile?.classList.toggle('active');
+                    // Close desktop dropdown if open
+                    if (langDropdown) {
+                        langDropdown.classList.remove('active');
+                    }
+                });
+            }
+            
+            // Language option click handlers
+            document.querySelectorAll('.lang-dropdown-item').forEach(item => {
+                item.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const lang = item.dataset.lang;
+                    switchLanguage(lang);
+                });
+            });
+            
+            // Close dropdown when clicking outside
+            document.addEventListener('click', (e) => {
+                if (!e.target.closest('.lang-dropdown')) {
+                    document.querySelectorAll('.lang-dropdown').forEach(dropdown => {
+                        dropdown.classList.remove('active');
+                    });
+                }
+            });
             
             // Mobile menu toggle
             const mobileMenuBtn = document.getElementById('mobile-menu-btn');
             const mobileMenu = document.getElementById('mobile-menu');
             
             if (mobileMenuBtn) {
-                mobileMenuBtn.addEventListener('click', () => {
+                mobileMenuBtn.addEventListener('click', (e) => {
+                    e.stopPropagation();
                     mobileMenu.classList.toggle('hidden');
+                    // Close language dropdowns when opening menu
+                    document.querySelectorAll('.lang-dropdown').forEach(dropdown => {
+                        dropdown.classList.remove('active');
+                    });
                 });
             }
+            
+            // Close mobile menu when clicking outside
+            document.addEventListener('click', (e) => {
+                if (!e.target.closest('nav')) {
+                    if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                }
+            });
             
             // Smooth scrolling for navigation links
             document.querySelectorAll('a[href^="#"]').forEach(anchor => {
