@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Merawan Mohammed - Haramaya Woreda Administration Officer</title>
+    <title>Merawan Mohammed - Woreda Administration Officer</title>
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Three.js for 3D elements -->
@@ -39,268 +39,8 @@
         
         .glass-morphism {
             background: rgba(255, 255, 255, 0.7);
-            backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-        }
-        
-        .glass-morphism-dark {
-            background: rgba(10, 36, 99, 0.1);
-            backdrop-filter: blur(20px);
+            backdrop-filter: blur(10px);
             border: 1px solid rgba(255, 255, 255, 0.2);
-        }
-        
-        /* Modern Gradient Backgrounds */
-        .gradient-animated {
-            background: linear-gradient(-45deg, #0A2463, #1E40AF, #047857, #0A2463);
-            background-size: 400% 400%;
-            animation: gradientShift 15s ease infinite;
-        }
-        
-        @keyframes gradientShift {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
-        
-        /* Floating Animation */
-        @keyframes float {
-            0%, 100% { transform: translateY(0px) rotate(0deg); }
-            50% { transform: translateY(-20px) rotate(5deg); }
-        }
-        
-        .float-animation {
-            animation: float 6s ease-in-out infinite;
-        }
-        
-        /* Pulse Animation */
-        @keyframes pulse-glow {
-            0%, 100% { 
-                box-shadow: 0 0 20px rgba(10, 36, 99, 0.3);
-                transform: scale(1);
-            }
-            50% { 
-                box-shadow: 0 0 40px rgba(4, 120, 87, 0.6);
-                transform: scale(1.05);
-            }
-        }
-        
-        .pulse-glow {
-            animation: pulse-glow 3s ease-in-out infinite;
-        }
-        
-        /* 3D Transform Effects */
-        .transform-3d {
-            transform-style: preserve-3d;
-            perspective: 1000px;
-        }
-        
-        .card-3d-hover {
-            transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
-        }
-        
-        .card-3d-hover:hover {
-            transform: translateY(-15px) rotateX(5deg) rotateY(5deg) scale(1.02);
-        }
-        
-        /* Shimmer Effect */
-        @keyframes shimmer {
-            0% { background-position: -1000px 0; }
-            100% { background-position: 1000px 0; }
-        }
-        
-        .shimmer {
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
-            background-size: 1000px 100%;
-            animation: shimmer 3s infinite;
-        }
-        
-        /* Text Glow */
-        .text-glow {
-            text-shadow: 0 0 10px rgba(10, 36, 99, 0.5),
-                         0 0 20px rgba(10, 36, 99, 0.3),
-                         0 0 30px rgba(10, 36, 99, 0.2);
-        }
-        
-        /* Particle Background */
-        .particle {
-            position: absolute;
-            border-radius: 50%;
-            background: rgba(10, 36, 99, 0.1);
-            animation: particleFloat 20s infinite;
-        }
-        
-        @keyframes particleFloat {
-            0% { transform: translateY(0) translateX(0) scale(0); opacity: 0; }
-            10% { opacity: 1; }
-            90% { opacity: 1; }
-            100% { transform: translateY(-100vh) translateX(100px) scale(1); opacity: 0; }
-        }
-        
-        /* Navbar Animation */
-        .nav-link {
-            position: relative;
-            transition: all 0.3s ease;
-        }
-        
-        .nav-link::after {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: linear-gradient(90deg, #047857, #0A2463);
-            transition: width 0.3s ease;
-        }
-        
-        .nav-link:hover::after {
-            width: 100%;
-        }
-        
-        /* Button Hover Effects - Enhanced Visibility */
-        .btn-modern {
-            position: relative;
-            overflow: hidden;
-            transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
-            display: inline-block;
-            min-width: 180px;
-            text-align: center;
-        }
-        
-        .btn-modern::before {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 0;
-            height: 0;
-            border-radius: 50%;
-            background: rgba(255, 255, 255, 0.3);
-            transform: translate(-50%, -50%);
-            transition: width 0.6s, height 0.6s;
-        }
-        
-        .btn-modern:hover::before {
-            width: 300px;
-            height: 300px;
-        }
-        
-        .btn-modern::after {
-            content: '';
-            position: absolute;
-            inset: 0;
-            border-radius: inherit;
-            padding: 2px;
-            background: linear-gradient(135deg, rgba(255,255,255,0.5), rgba(255,255,255,0));
-            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-            -webkit-mask-composite: xor;
-            mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-            mask-composite: exclude;
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-        
-        .btn-modern:hover::after {
-            opacity: 1;
-        }
-        
-        /* Enhanced button visibility */
-        .btn-modern {
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2),
-                        0 0 20px rgba(4, 120, 87, 0.3);
-        }
-        
-        .btn-modern:hover {
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3),
-                        0 0 30px rgba(4, 120, 87, 0.5);
-        }
-        
-        /* White button specific styles */
-        .btn-modern.bg-white {
-            box-shadow: 0 10px 25px rgba(30, 64, 175, 0.2),
-                        0 0 20px rgba(30, 64, 175, 0.15);
-        }
-        
-        .btn-modern.bg-white:hover {
-            box-shadow: 0 15px 35px rgba(30, 64, 175, 0.3),
-                        0 0 30px rgba(30, 64, 175, 0.25);
-        }
-        
-        /* Hexagon 3D Effect */
-        .hexagon-3d {
-            transform-style: preserve-3d;
-            transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
-        }
-        
-        .hexagon-3d:hover {
-            transform: rotateY(10deg) rotateX(5deg) scale(1.05);
-        }
-        
-        /* Scroll Reveal */
-        .reveal {
-            opacity: 0;
-            transform: translateY(50px);
-            transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
-        }
-        
-        .reveal.active {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        
-        /* Gradient Text */
-        .gradient-text {
-            background: linear-gradient(135deg, #0A2463, #047857);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-        
-        /* Magnetic Effect */
-        .magnetic {
-            transition: transform 0.3s cubic-bezier(0.23, 1, 0.32, 1);
-        }
-        
-        /* Ripple Effect */
-        .ripple {
-            position: absolute;
-            border-radius: 50%;
-            background: rgba(255, 255, 255, 0.6);
-            transform: scale(0);
-            animation: ripple-animation 0.6s ease-out;
-            pointer-events: none;
-        }
-        
-        @keyframes ripple-animation {
-            to {
-                transform: scale(4);
-                opacity: 0;
-            }
-        }
-        
-        /* Smooth transitions for all interactive elements */
-        * {
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-        }
-        
-        /* Enhanced scrollbar */
-        ::-webkit-scrollbar {
-            width: 10px;
-        }
-        
-        ::-webkit-scrollbar-track {
-            background: #f1f1f1;
-        }
-        
-        ::-webkit-scrollbar-thumb {
-            background: linear-gradient(180deg, #0A2463, #047857);
-            border-radius: 5px;
-        }
-        
-        ::-webkit-scrollbar-thumb:hover {
-            background: linear-gradient(180deg, #1E40AF, #059669);
         }
         
         .section-padding {
@@ -319,20 +59,15 @@
             }
         }
         
-        /* 3D Card Hover Effect - Enhanced */
+        /* 3D Card Hover Effect */
         .card-3d {
-            transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1), 
-                        box-shadow 0.6s ease,
-                        filter 0.6s ease;
+            transition: transform 0.5s ease, box-shadow 0.5s ease;
             transform-style: preserve-3d;
-            perspective: 1000px;
         }
         
         .card-3d:hover {
-            transform: translateY(-15px) rotateX(5deg) rotateY(5deg) scale(1.02);
-            box-shadow: 0 30px 60px rgba(10, 36, 99, 0.3),
-                        0 0 40px rgba(4, 120, 87, 0.2);
-            filter: brightness(1.05);
+            transform: translateY(-10px) rotateX(5deg);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
         }
         
         /* Timeline Styling */
@@ -362,87 +97,12 @@
             background-color: var(--accent-green);
         }
         
-        /* Language Dropdown */
-        .lang-dropdown {
-            position: relative;
-        }
-        
-        .lang-dropdown-menu {
-            position: absolute;
-            top: 100%;
-            right: 0;
-            margin-top: 0.5rem;
-            background: white;
-            border-radius: 0.5rem;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-            min-width: 120px;
-            opacity: 0;
-            visibility: hidden;
-            transform: translateY(-10px);
-            transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+        /* Language Switcher */
+        .lang-switcher {
+            position: fixed;
+            top: 1rem;
+            right: 1rem;
             z-index: 1000;
-        }
-        
-        .lang-dropdown.active .lang-dropdown-menu {
-            opacity: 1;
-            visibility: visible;
-            transform: translateY(0);
-        }
-        
-        .lang-dropdown-btn {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            padding: 0.5rem 1rem;
-            background: white;
-            border: 1px solid #e5e7eb;
-            border-radius: 0.5rem;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-        
-        .lang-dropdown-btn:hover {
-            background: #f3f4f6;
-            border-color: #3b82f6;
-        }
-        
-        .lang-dropdown-menu button {
-            width: 100%;
-            text-align: left;
-            padding: 0.75rem 1rem;
-            border: none;
-            background: none;
-            cursor: pointer;
-            transition: background 0.2s ease;
-            border-radius: 0;
-        }
-        
-        .lang-dropdown-menu button:first-child {
-            border-top-left-radius: 0.5rem;
-            border-top-right-radius: 0.5rem;
-        }
-        
-        .lang-dropdown-menu button:last-child {
-            border-bottom-left-radius: 0.5rem;
-            border-bottom-right-radius: 0.5rem;
-        }
-        
-        .lang-dropdown-menu button:hover {
-            background: #f3f4f6;
-        }
-        
-        .lang-dropdown-menu button.active {
-            background: #3b82f6;
-            color: white;
-        }
-        
-        /* Mobile Menu Icon Animation */
-        .mobile-menu-icon {
-            transition: transform 0.3s ease;
-        }
-        
-        .mobile-menu-icon.active {
-            transform: rotate(90deg);
         }
         
         /* Smooth Scroll Behavior */
@@ -479,89 +139,24 @@
             height: 100%;
             z-index: -1;
         }
-        
-        /* Hexagon Shape */
-        .hexagon {
-            position: relative;
-            width: 300px;
-            height: 300px;
-            margin: 0 auto;
-            filter: drop-shadow(0 10px 30px rgba(10, 36, 99, 0.3));
-        }
-        
-        .hexagon::before {
-            content: '';
-            position: absolute;
-            top: -10px;
-            left: -10px;
-            width: calc(100% + 20px);
-            height: calc(100% + 20px);
-            background: var(--primary-blue);
-            clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-            z-index: 0;
-        }
-        
-        .hexagon::after {
-            content: '';
-            position: absolute;
-            top: -8px;
-            left: -8px;
-            width: calc(100% + 16px);
-            height: calc(100% + 16px);
-            background: white;
-            clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-            z-index: 1;
-        }
-        
-        .hexagon img {
-            position: relative;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-            z-index: 2;
-        }
-        
-        .hexagon-fallback {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: var(--primary-blue);
-            clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            z-index: 2;
-        }
-        
-        @media (max-width: 768px) {
-            .hexagon {
-                width: 250px;
-                height: 250px;
-            }
-        }
-        
-        /* Profile Photo */
-        .profile-photo {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            border-radius: 50%;
-        }
     </style>
 </head>
 <body class="bg-white">
-    <!-- Particle Background -->
-    <div id="particles-container" class="fixed inset-0 pointer-events-none z-0"></div>
+    <!-- Language Switcher -->
+    <div class="lang-switcher">
+        <div class="flex space-x-1 bg-white rounded-lg shadow-lg p-1">
+            <button id="lang-en" class="lang-btn px-3 py-1 rounded-md bg-blue-600 text-white font-medium" data-lang="en">EN</button>
+            <button id="lang-om" class="lang-btn px-3 py-1 rounded-md hover:bg-gray-100 transition" data-lang="om">OM</button>
+            <button id="lang-am" class="lang-btn px-3 py-1 rounded-md hover:bg-gray-100 transition" data-lang="am">AM</button>
+        </div>
+    </div>
 
     <!-- Navigation -->
-    <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md shadow-sm transform-3d">
+    <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md shadow-sm">
         <div class="container mx-auto px-6 py-4">
             <div class="flex justify-between items-center">
                 <div class="text-xl font-bold text-blue-900">Merawan Mohammed</div>
-                <div class="hidden md:flex space-x-8 items-center">
+                <div class="hidden md:flex space-x-8">
                     <a href="#home" class="nav-link text-blue-900 hover:text-green-700 font-medium transition">Home</a>
                     <a href="#profile" class="nav-link text-blue-900 hover:text-green-700 font-medium transition">Profile</a>
                     <a href="#experience" class="nav-link text-blue-900 hover:text-green-700 font-medium transition">Experience</a>
@@ -569,40 +164,10 @@
                     <a href="#competencies" class="nav-link text-blue-900 hover:text-green-700 font-medium transition">Competencies</a>
                     <a href="#vision" class="nav-link text-blue-900 hover:text-green-700 font-medium transition">Vision</a>
                     <a href="#contact" class="nav-link text-blue-900 hover:text-green-700 font-medium transition">Contact</a>
-                    
-                    <!-- Language Dropdown -->
-                    <div class="lang-dropdown">
-                        <button class="lang-dropdown-btn" id="lang-dropdown-btn">
-                            <i class="fas fa-globe text-blue-900"></i>
-                            <span id="current-lang" class="font-medium text-blue-900">EN</span>
-                            <i class="fas fa-chevron-down text-blue-900 text-xs"></i>
-                        </button>
-                        <div class="lang-dropdown-menu">
-                            <button class="lang-btn active" data-lang="en">English (EN)</button>
-                            <button class="lang-btn" data-lang="om">Oromo (OM)</button>
-                            <button class="lang-btn" data-lang="am">Amharic (AM)</button>
                 </div>
-                    </div>
-                </div>
-                <div class="flex items-center space-x-4">
-                    <!-- Language Dropdown for Mobile -->
-                    <div class="lang-dropdown md:hidden">
-                        <button class="lang-dropdown-btn" id="lang-dropdown-btn-mobile">
-                            <i class="fas fa-globe text-blue-900"></i>
-                            <span id="current-lang-mobile" class="font-medium text-blue-900">EN</span>
-                            <i class="fas fa-chevron-down text-blue-900 text-xs"></i>
-                        </button>
-                        <div class="lang-dropdown-menu">
-                            <button class="lang-btn active" data-lang="en">English (EN)</button>
-                            <button class="lang-btn" data-lang="om">Oromo (OM)</button>
-                            <button class="lang-btn" data-lang="am">Amharic (AM)</button>
-                        </div>
-                    </div>
-                    <!-- Mobile Menu Icon -->
-                    <button id="mobile-menu-btn" class="md:hidden text-blue-900 mobile-menu-icon">
+                <button id="mobile-menu-btn" class="md:hidden text-blue-900">
                     <i class="fas fa-bars text-xl"></i>
                 </button>
-                </div>
             </div>
             <!-- Mobile Menu -->
             <div id="mobile-menu" class="hidden md:hidden mt-4 space-y-3">
@@ -624,25 +189,12 @@
         
         <!-- Content -->
         <div class="container mx-auto relative z-10">
-            <div class="max-w-6xl mx-auto">
-                <div class="grid md:grid-cols-2 gap-12 items-center">
-                    <!-- Photo in Navy Hexagon -->
-                    <div class="fade-in order-2 md:order-1 flex justify-center md:justify-start">
-                        <div class="hexagon hexagon-3d float-animation pulse-glow">
-                            <img src="images/merwan-photo.jpg" alt="Merawan Mohammed" id="hero-photo">
-                            <div class="hexagon-fallback" id="hexagon-fallback" style="display: none;">
-                                <i class="fas fa-user text-white text-6xl"></i>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Text Content -->
-                    <div class="text-center md:text-left order-1 md:order-2">
+            <div class="max-w-4xl mx-auto text-center">
                 <div class="mb-6">
                     <div class="inline-block px-4 py-2 rounded-full bg-blue-100 text-blue-800 font-medium mb-4">
-                        <span class="lang-element" data-en="Haramaya Woreda Administration Officer" data-om="Hogganaa Misooma Woredaa" data-am="የወረዳ አስተዳደር ባለሙያ">Haramaya Woreda Administration Officer</span>
+                        <span class="lang-element" data-en="Woreda Administration Officer" data-om="Hogganaa Misooma Woredaa" data-am="የወረዳ አስተዳደር ባለሙያ">Woreda Administration Officer</span>
                     </div>
-                            <h1 class="text-4xl md:text-6xl font-bold text-blue-900 mb-6 text-glow gradient-text">
+                    <h1 class="text-4xl md:text-6xl font-bold text-blue-900 mb-6">
                         <span class="lang-element" data-en="Merawan Mohammed" data-om="Maraawan Mahammad" data-am="መርዓወን መሀመድ">Merawan Mohammed</span>
                     </h1>
                     <p class="text-xl md:text-2xl text-blue-800 mb-8 leading-relaxed">
@@ -650,15 +202,13 @@
                     </p>
                 </div>
                 
-                <div class="flex flex-col md:flex-row justify-center md:justify-start items-center md:items-start space-y-6 md:space-y-0 md:space-x-6">
-                    <a href="#contact" class="btn-modern px-10 py-4 bg-gradient-to-r from-green-600 to-green-700 text-white font-semibold text-lg rounded-xl shadow-2xl hover:shadow-green-500/50 transition-all transform hover:-translate-y-2 hover:scale-105 relative overflow-hidden border-2 border-green-500">
-                        <span class="relative z-10 lang-element" data-en="Contact Office" data-om="Miseensota Biroo" data-am="ኦፊስ አግኙ">Contact Office</span>
+                <div class="flex flex-col md:flex-row justify-center items-center space-y-6 md:space-y-0 md:space-x-6">
+                    <a href="#contact" class="px-8 py-3 bg-green-600 text-white font-medium rounded-lg shadow-lg hover:bg-green-700 transition transform hover:-translate-y-1">
+                        <span class="lang-element" data-en="Contact Office" data-om="Miseensota Biroo" data-am="ኦፊስ አግኙ">Contact Office</span>
                     </a>
-                    <a href="#initiatives" class="btn-modern px-10 py-4 bg-white text-blue-900 border-3 border-blue-500 font-semibold text-lg rounded-xl shadow-2xl hover:shadow-blue-500/50 hover:bg-blue-50 transition-all transform hover:-translate-y-2 hover:scale-105 relative overflow-hidden">
-                        <span class="relative z-10 lang-element" data-en="View Initiatives" data-om="Dhimmi Hojii Agarsiisi" data-am="ተነሳሽነቶችን ይመልከቱ">View Initiatives</span>
+                    <a href="#initiatives" class="px-8 py-3 bg-white text-blue-900 border border-blue-300 font-medium rounded-lg shadow hover:bg-blue-50 transition transform hover:-translate-y-1">
+                        <span class="lang-element" data-en="View Initiatives" data-om="Dhimmi Hojii Agarsiisi" data-am="ተነሳሽነቶችን ይመልከቱ">View Initiatives</span>
                     </a>
-                </div>
-                    </div>
                 </div>
             </div>
         </div>
@@ -686,13 +236,13 @@
             
             <div class="grid md:grid-cols-2 gap-8 items-center">
                 <div class="fade-in">
-                    <div class="glass-morphism rounded-2xl p-8 shadow-xl card-3d reveal">
+                    <div class="glass-morphism rounded-2xl p-8 shadow-xl card-3d">
                         <div class="mb-6">
                             <h3 class="text-2xl font-bold text-blue-900 mb-4">
                                 <span class="lang-element" data-en="Professional Biography" data-om="Seenaa Ogummaa" data-am="የሙያ የሕይወት ታሪክ">Professional Biography</span>
                             </h3>
                             <p class="text-gray-700 mb-4">
-                                <span class="lang-element" data-en="Merawan Mohammed is a dedicated Haramaya Woreda Administration Officer with over a decade of experience in public administration, local governance, and community development. His career is characterized by a steadfast commitment to improving service delivery, promoting transparency, and fostering inclusive growth within his jurisdiction." data-om="Maraawan Mahammad hogganaa misooma woredaa kan waggaa kudhan ol hojjate ogummaa miseensa mootummaa, misooma naannoo, fi guddina hawaasaa keessatti. Hojii isaa akkaataa sirnaan dhiyeessuu, ifatti agarsiisuu, fi guddina walqixxummaa godhachuuf yaalii cimsaa irratti hundaa'a." data-am="መርዓወን መሀመድ ከአስር አመት በላይ በህዝብ አስተዳደር፣ በአካባቢ አስተዳደር እና በማህበረሰብ ልማት ልምድ ያለው ተሰጥኦ የወረዳ አስተዳደር ባለሙያ ነው። ሥራው በስልጣን ክልል ውስጥ አገልግሎት አቅርቦት ማሻሻል፣ ግልጽነት ማስተዋወቅ እና አባላትን ሁሉ የሚያካትት እድገት ማሳደግ ላይ የተሰጠ ቁርጠኝነት ይታወቃል።">Merawan Mohammed is a dedicated Haramaya Woreda Administration Officer with over a decade of experience in public administration, local governance, and community development.</span>
+                                <span class="lang-element" data-en="Merawan Mohammed is a dedicated Woreda Administration Officer with over a decade of experience in public administration, local governance, and community development. His career is characterized by a steadfast commitment to improving service delivery, promoting transparency, and fostering inclusive growth within his jurisdiction." data-om="Maraawan Mahammad hogganaa misooma woredaa kan waggaa kudhan ol hojjate ogummaa miseensa mootummaa, misooma naannoo, fi guddina hawaasaa keessatti. Hojii isaa akkaataa sirnaan dhiyeessuu, ifatti agarsiisuu, fi guddina walqixxummaa godhachuuf yaalii cimsaa irratti hundaa'a." data-am="መርዓወን መሀመድ ከአስር አመት በላይ በህዝብ አስተዳደር፣ በአካባቢ አስተዳደር እና በማህበረሰብ ልማት ልምድ ያለው ተሰጥኦ የወረዳ አስተዳደር ባለሙያ ነው። ሥራው በስልጣን ክልል ውስጥ አገልግሎት አቅርቦት ማሻሻል፣ ግልጽነት ማስተዋወቅ እና አባላትን ሁሉ የሚያካትት እድገት ማሳደግ ላይ የተሰጠ ቁርጠኝነት ይታወቃል።">Merawan Mohammed is a dedicated Woreda Administration Officer with over a decade of experience in public administration, local governance, and community development.</span>
                             </p>
                             <p class="text-gray-700">
                                 <span class="lang-element" data-en="Through strategic planning and collaborative leadership, Merawan has successfully implemented numerous initiatives that have enhanced administrative efficiency, empowered local communities, and improved access to essential services for citizens across the woreda." data-om="Qophii tooftaa fi hogganaa walitti hidhameen, Maraawan dhimmi hojii baay'ee hojiirra oolse kan misooma sochowaa cimsee, hawaasota naannoo dandeettii kennite, fi dhaabbataa bu'uuraa hawaasota woredaa hundaaf ta'uuf dhiyeessise." data-am="በስትራቴጂካዊ ዕቅድ እና በጋራ አመራር፣ መርዓወን የአስተዳደር ውጤታማነት ማሻሻል፣ የአካባቢ ማህበረሰቦች ኃይለኛ ማድረግ እና በወረዳው ውስጥ ለዜጎች መሠረታዊ አገልግሎቶች መዳረሻ ማሻሻል የሚያስችሉ ብዙ ተነሳሽነቶችን በተሳካ ሁኔታ አፈፅሟል።">Through strategic planning and collaborative leadership, Merawan has successfully implemented numerous initiatives.</span>
@@ -716,17 +266,17 @@
                 </div>
                 
                 <div class="fade-in">
-                    <div class="relative reveal">
-                        <!-- Official portrait with photo -->
-                        <div class="bg-gradient-to-br from-blue-100 to-green-100 rounded-2xl overflow-hidden shadow-2xl card-3d-hover">
-                            <div class="h-96 flex items-center justify-center p-8">
-                                <div class="text-center w-full">
-                                    <div class="w-48 h-48 rounded-full bg-blue-200 mx-auto mb-6 overflow-hidden border-4 border-blue-300 shadow-lg">
-                                        <img src="images/merwan-photo.jpg" alt="Merawan Mohammed" class="profile-photo" id="profile-photo">
+                    <div class="relative">
+                        <!-- Placeholder for official portrait -->
+                        <div class="bg-gradient-to-br from-blue-100 to-green-100 rounded-2xl overflow-hidden shadow-2xl">
+                            <div class="h-96 flex items-center justify-center">
+                                <div class="text-center">
+                                    <div class="w-48 h-48 rounded-full bg-blue-200 mx-auto mb-6 flex items-center justify-center">
+                                        <i class="fas fa-user-tie text-blue-700 text-7xl"></i>
                                     </div>
                                     <h3 class="text-2xl font-bold text-blue-900">Merawan Mohammed</h3>
                                     <p class="text-blue-700 mt-2">
-                                        <span class="lang-element" data-en="Haramaya Woreda Administration Officer" data-om="Hogganaa Misooma Woredaa" data-am="የወረዳ አስተዳደር ባለሙያ">Haramaya Woreda Administration Officer</span>
+                                        <span class="lang-element" data-en="Woreda Administration Officer" data-om="Hogganaa Misooma Woredaa" data-am="የወረዳ አስተዳደር ባለሙያ">Woreda Administration Officer</span>
                                     </p>
                                 </div>
                             </div>
@@ -761,7 +311,7 @@
                     <div class="glass-morphism rounded-xl p-6 shadow-lg">
                         <div class="flex flex-col md:flex-row md:items-center justify-between mb-4">
                             <h3 class="text-xl font-bold text-blue-900">
-                                <span class="lang-element" data-en="Haramaya Woreda Administration Officer" data-om="Hogganaa Misooma Woredaa" data-am="የወረዳ አስተዳደር ባለሙያ">Haramaya Woreda Administration Officer</span>
+                                <span class="lang-element" data-en="Woreda Administration Officer" data-om="Hogganaa Misooma Woredaa" data-am="የወረዳ አስተዳደር ባለሙያ">Woreda Administration Officer</span>
                             </h3>
                             <span class="inline-block px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium mt-2 md:mt-0">2020 - Present</span>
                         </div>
@@ -837,8 +387,8 @@
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Initiative 1 -->
                 <div class="fade-in">
-                    <div class="glass-morphism rounded-2xl p-6 h-full shadow-lg card-3d reveal">
-                        <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-blue-100 to-blue-200 flex items-center justify-center mb-6 transform-3d card-3d-hover">
+                    <div class="glass-morphism rounded-2xl p-6 h-full shadow-lg card-3d">
+                        <div class="w-14 h-14 rounded-xl bg-blue-100 flex items-center justify-center mb-6">
                             <i class="fas fa-laptop-house text-blue-600 text-2xl"></i>
                         </div>
                         <h3 class="text-xl font-bold text-blue-900 mb-4">
@@ -860,8 +410,8 @@
                 
                 <!-- Initiative 2 -->
                 <div class="fade-in">
-                    <div class="glass-morphism rounded-2xl p-6 h-full shadow-lg card-3d reveal">
-                        <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-green-100 to-green-200 flex items-center justify-center mb-6 transform-3d card-3d-hover">
+                    <div class="glass-morphism rounded-2xl p-6 h-full shadow-lg card-3d">
+                        <div class="w-14 h-14 rounded-xl bg-green-100 flex items-center justify-center mb-6">
                             <i class="fas fa-handshake text-green-600 text-2xl"></i>
                         </div>
                         <h3 class="text-xl font-bold text-blue-900 mb-4">
@@ -883,7 +433,7 @@
                 
                 <!-- Initiative 3 -->
                 <div class="fade-in">
-                    <div class="glass-morphism rounded-2xl p-6 h-full shadow-lg card-3d reveal">
+                    <div class="glass-morphism rounded-2xl p-6 h-full shadow-lg card-3d">
                         <div class="w-14 h-14 rounded-xl bg-blue-100 flex items-center justify-center mb-6">
                             <i class="fas fa-road text-blue-600 text-2xl"></i>
                         </div>
@@ -924,7 +474,7 @@
                 <!-- Competency 1 -->
                 <div class="fade-in">
                     <div class="text-center p-6 rounded-2xl hover:shadow-xl transition-shadow duration-300 border border-gray-100">
-                        <div class="w-20 h-20 rounded-full bg-gradient-to-br from-blue-100 to-blue-200 flex items-center justify-center mx-auto mb-6 transform-3d card-3d-hover pulse-glow">
+                        <div class="w-20 h-20 rounded-full bg-blue-100 flex items-center justify-center mx-auto mb-6">
                             <i class="fas fa-landmark text-blue-600 text-3xl"></i>
                         </div>
                         <h3 class="text-xl font-bold text-blue-900 mb-3">
@@ -939,7 +489,7 @@
                 <!-- Competency 2 -->
                 <div class="fade-in">
                     <div class="text-center p-6 rounded-2xl hover:shadow-xl transition-shadow duration-300 border border-gray-100">
-                        <div class="w-20 h-20 rounded-full bg-gradient-to-br from-green-100 to-green-200 flex items-center justify-center mx-auto mb-6 transform-3d card-3d-hover pulse-glow">
+                        <div class="w-20 h-20 rounded-full bg-green-100 flex items-center justify-center mx-auto mb-6">
                             <i class="fas fa-users text-green-600 text-3xl"></i>
                         </div>
                         <h3 class="text-xl font-bold text-blue-900 mb-3">
@@ -1090,7 +640,7 @@
                 </h2>
                 <div class="w-24 h-1 bg-green-600 mx-auto mb-6"></div>
                 <p class="text-gray-600 max-w-2xl mx-auto">
-                    <span class="lang-element" data-en="Get in touch with the Haramaya Woreda Administration Office for inquiries or assistance." data-om="Miseensota Biroo Misooma Woredaa Haramaya waliin dubbachuuf yookin gargaarsa argachuuf." data-am="ለጥያቄዎች ወይም ለእርዳታ ከሀራማያ ወረዳ አስተዳደር ቢሮ ጋር ያግኙ።">Get in touch with the Haramaya Woreda Administration Office for inquiries or assistance.</span>
+                    <span class="lang-element" data-en="Get in touch with the Woreda Administration Office for inquiries or assistance." data-om="Miseensota Biroo Misooma Woredaa waliin dubbachuuf yookin gargaarsa argachuuf." data-am="ለጥያቄዎች ወይም ለእርዳታ ከወረዳ አስተዳደር ቢሮ ጋር ያግኙ።">Get in touch with the Woreda Administration Office for inquiries or assistance.</span>
                 </p>
             </div>
             
@@ -1156,8 +706,8 @@
                                             <span class="lang-element" data-en="Office Location" data-om="Bakka Biroo" data-am="የቢሮ አድራሻ">Office Location</span>
                                         </h4>
                                         <p class="text-gray-700">
-                                            <span class="lang-element" data-en="Haramaya Woreda Administration Office" data-om="Biroo Misooma Woredaa Haramaya" data-am="የሀራማያ ወረዳ አስተዳደር ቢሮ">Haramaya Woreda Administration Office</span><br>
-                                            <span class="lang-element" data-en="Main Government Building, Haramaya Town" data-om="Mana Mootummaa Ijoo, Magaalaa Haramaya" data-am="ዋና የመንግሥት ሕንፃ, ሀራማያ ከተማ">Main Government Building, Haramaya Town</span>
+                                            Woreda Administration Office<br>
+                                            <span class="lang-element" data-en="Main Government Building, Woreda Town" data-om="Mana Mootummaa Ijoo, Magaalaa Woredaa" data-am="ዋና የመንግሥት ሕንፃ, ወረዳ ከተማ">Main Government Building, Woreda Town</span>
                                         </p>
                                     </div>
                                 </div>
@@ -1209,7 +759,7 @@
                                 <div class="text-center">
                                     <i class="fas fa-map text-blue-600 text-4xl mb-4"></i>
                                     <p class="text-blue-900 font-medium">
-                                        <span class="lang-element" data-en="Haramaya Woreda Administration Office Location" data-om="Bakka Biroo Misooma Woredaa Haramaya" data-am="የሀራማያ ወረዳ አስተዳደር ቢሮ አድራሻ">Haramaya Woreda Administration Office Location</span>
+                                        <span class="lang-element" data-en="Woreda Administration Office Location" data-om="Bakka Biroo Misooma Woredaa" data-am="የወረዳ አስተዳደር ቢሮ አድራሻ">Woreda Administration Office Location</span>
                                     </p>
                                 </div>
                             </div>
@@ -1227,7 +777,7 @@
                 <div class="mb-8 md:mb-0">
                     <h3 class="text-2xl font-bold mb-4">Merawan Mohammed</h3>
                     <p class="text-blue-200 max-w-md">
-                        <span class="lang-element" data-en="Haramaya Woreda Administration Officer dedicated to transparent governance and community development." data-om="Hogganaa Misooma Woredaa kan dhimma qabu ifatti agarsiisuufi guddina hawaasaa irratti." data-am="ወረዳ አስተዳደር ባለሙያ በግልጽ አስተዳደር እና በማህበረሰብ ልማት ቁርጠኝነት።">Haramaya Woreda Administration Officer dedicated to transparent governance and community development.</span>
+                        <span class="lang-element" data-en="Woreda Administration Officer dedicated to transparent governance and community development." data-om="Hogganaa Misooma Woredaa kan dhimma qabu ifatti agarsiisuufi guddina hawaasaa irratti." data-am="ወረዳ አስተዳደር ባለሙያ በግልጽ አስተዳደር እና በማህበረሰብ ልማት ቁርጠኝነት።">Woreda Administration Officer dedicated to transparent governance and community development.</span>
                     </p>
                 </div>
                 
@@ -1246,7 +796,7 @@
             
             <div class="border-t border-blue-800 mt-10 pt-8 text-center text-blue-300">
                 <p>
-                    <span class="lang-element" data-en="© 2023 Haramaya Woreda Administration Office. All rights reserved." data-om="© 2023 Biroo Misooma Woredaa Haramaya. Mirgi hundi kan ofii." data-am="© 2023 የሀራማያ ወረዳ አስተዳደር ቢሮ። ሁሉም መብቶች የተጠበቁ ናቸው።">© 2023 Haramaya Woreda Administration Office. All rights reserved.</span>
+                    <span class="lang-element" data-en="© 2023 Woreda Administration Office. All rights reserved." data-om="© 2023 Biroo Misooma Woredaa. Mirgi hundi kan ofii." data-am="© 2023 የወረዳ አስተዳደር ቢሮ። ሁሉም መብቶች የተጠበቁ ናቸው።">© 2023 Woreda Administration Office. All rights reserved.</span>
                 </p>
             </div>
         </div>
@@ -1267,8 +817,16 @@
         function switchLanguage(lang) {
             currentLang = lang;
             
-            // Update language display in dropdown
-            updateLanguageDisplay(lang);
+            // Update active language button
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                if (btn.dataset.lang === lang) {
+                    btn.classList.add('bg-blue-600', 'text-white');
+                    btn.classList.remove('hover:bg-gray-100', 'text-gray-700');
+                } else {
+                    btn.classList.remove('bg-blue-600', 'text-white');
+                    btn.classList.add('hover:bg-gray-100', 'text-gray-700');
+                }
+            });
             
             // Update all elements with lang-element class
             document.querySelectorAll('.lang-element').forEach(element => {
@@ -1279,147 +837,17 @@
             });
         }
         
-        // Language dropdown functionality
-        function initLanguageDropdown() {
-            const dropdowns = document.querySelectorAll('.lang-dropdown');
-            const dropdownBtns = document.querySelectorAll('#lang-dropdown-btn, #lang-dropdown-btn-mobile');
-            
-            // Toggle dropdown on button click
-            dropdownBtns.forEach(btn => {
-                btn.addEventListener('click', (e) => {
-                    e.stopPropagation();
-                    const dropdown = btn.closest('.lang-dropdown');
-                    dropdown.classList.toggle('active');
-                    
-                    // Close other dropdowns
-                    dropdowns.forEach(d => {
-                        if (d !== dropdown) {
-                            d.classList.remove('active');
-                        }
-                    });
-                });
-            });
-            
-            // Close dropdown when clicking outside
-            document.addEventListener('click', (e) => {
-                if (!e.target.closest('.lang-dropdown')) {
-                    dropdowns.forEach(dropdown => {
-                        dropdown.classList.remove('active');
-                    });
-                }
-            });
-        
         // Language switcher event listeners
         document.querySelectorAll('.lang-btn').forEach(btn => {
-                btn.addEventListener('click', (e) => {
-                    e.stopPropagation();
+            btn.addEventListener('click', () => {
                 const lang = btn.dataset.lang;
                 switchLanguage(lang);
-                    
-                    // Close dropdown after selection
-                    dropdowns.forEach(dropdown => {
-                        dropdown.classList.remove('active');
             });
         });
-            });
-        }
-        
-        // Update language dropdown display
-        function updateLanguageDisplay(lang) {
-            const langNames = {
-                'en': 'EN',
-                'om': 'OM',
-                'am': 'AM'
-            };
-            
-            const currentLangElements = document.querySelectorAll('#current-lang, #current-lang-mobile');
-            currentLangElements.forEach(el => {
-                el.textContent = langNames[lang] || 'EN';
-            });
-            
-            // Update active state in dropdown menus
-            document.querySelectorAll('.lang-dropdown-menu .lang-btn').forEach(btn => {
-                if (btn.dataset.lang === lang) {
-                    btn.classList.add('active');
-                } else {
-                    btn.classList.remove('active');
-                }
-            });
-        }
-        
-        // Load image with fallbacks
-        function loadImageWithFallback(imgElement, fallbackElement, imagePaths) {
-            let currentIndex = 0;
-            
-            function tryNextImage() {
-                if (currentIndex >= imagePaths.length) {
-                    // All paths failed, show fallback
-                    if (imgElement) imgElement.style.display = 'none';
-                    if (fallbackElement) fallbackElement.style.display = 'flex';
-                    return;
-                }
-                
-                const img = new Image();
-                img.onload = function() {
-                    imgElement.src = imagePaths[currentIndex];
-                    imgElement.style.display = 'block';
-                    if (fallbackElement) fallbackElement.style.display = 'none';
-                };
-                img.onerror = function() {
-                    currentIndex++;
-                    tryNextImage();
-                };
-                img.src = imagePaths[currentIndex];
-            }
-            
-            tryNextImage();
-        }
-        
-        // Initialize images
-        function initImages() {
-            const imagePaths = [
-                'images/merwan-photo.jpg',
-                'images/merwan-photo.jpeg',
-                'images/merwan-photo.png',
-                'merwan-photo.jpg',
-                'merwan-photo.jpeg',
-                'merwan-photo.png',
-                './merwan-photo.jpg',
-                './merwan-photo.jpeg'
-            ];
-            
-            // Hero photo
-            const heroPhoto = document.getElementById('hero-photo');
-            const heroFallback = document.getElementById('hexagon-fallback');
-            if (heroPhoto) {
-                loadImageWithFallback(heroPhoto, heroFallback, imagePaths);
-            }
-            
-            // Profile photo
-            const profilePhoto = document.getElementById('profile-photo');
-            if (profilePhoto) {
-                const profileContainer = profilePhoto.parentElement;
-                loadImageWithFallback(profilePhoto, null, imagePaths);
-                
-                // Fallback for profile photo
-                profilePhoto.onerror = function() {
-                    this.style.display = 'none';
-                    if (!profileContainer.querySelector('i')) {
-                        profileContainer.innerHTML = '<i class="fas fa-user-tie text-blue-700 text-7xl flex items-center justify-center h-full"></i>';
-                    }
-                };
-            }
-        }
         
         // Initialize language
         document.addEventListener('DOMContentLoaded', () => {
             switchLanguage('en');
-            
-            // Initialize language dropdown
-            initLanguageDropdown();
-            
-            // Initialize images
-            initImages();
             
             // Mobile menu toggle
             const mobileMenuBtn = document.getElementById('mobile-menu-btn');
@@ -1428,7 +856,6 @@
             if (mobileMenuBtn) {
                 mobileMenuBtn.addEventListener('click', () => {
                     mobileMenu.classList.toggle('hidden');
-                    mobileMenuBtn.classList.toggle('active');
                 });
             }
             
@@ -1482,408 +909,86 @@
             
             // Initialize 3D background
             init3DBackground();
-            
-            // Create floating particles
-            createParticles();
-            
-            // Initialize magnetic effects
-            initMagneticEffect();
-            
-            // Initialize ripple effects
-            initRippleEffect();
-            
-            // Initialize 3D tilt
-            init3DTilt();
-            
-            // Initialize navbar animation
-            initNavbarAnimation();
-            
-            // Hero entrance animation
-            initHeroAnimation();
         });
         
-        // Enhanced Scroll animation with GSAP
+        // Scroll animation function
         function initScrollAnimations() {
-            // Register ScrollTrigger plugin
-            gsap.registerPlugin(ScrollTrigger);
+            const fadeElements = document.querySelectorAll('.fade-in');
             
-            // Animate fade-in elements
-            gsap.utils.toArray('.fade-in').forEach((element, i) => {
-                gsap.fromTo(element, 
-                    {
-                        opacity: 0,
-                        y: 50,
-                        scale: 0.9
-                    },
-                    {
-                        opacity: 1,
-                        y: 0,
-                        scale: 1,
-                        duration: 0.8,
-                        delay: i * 0.1,
-                        ease: 'power3.out',
-                        scrollTrigger: {
-                            trigger: element,
-                            start: 'top 80%',
-                            toggleActions: 'play none none reverse'
-                        }
+            const fadeInOnScroll = () => {
+                fadeElements.forEach(element => {
+                    const elementTop = element.getBoundingClientRect().top;
+                    const elementVisible = 150;
+                    
+                    if (elementTop < window.innerHeight - elementVisible) {
+                        element.classList.add('appear');
                     }
-                );
-            });
-            
-            // Animate reveal elements
-            gsap.utils.toArray('.reveal').forEach((element, i) => {
-                gsap.fromTo(element,
-                    {
-                        opacity: 0,
-                        y: 100,
-                        rotationX: -15
-                    },
-                    {
-                        opacity: 1,
-                        y: 0,
-                        rotationX: 0,
-                        duration: 1,
-                        delay: i * 0.15,
-                        ease: 'power4.out',
-                        scrollTrigger: {
-                            trigger: element,
-                            start: 'top 85%',
-                            toggleActions: 'play none none reverse'
-                        }
-                    }
-                );
-            });
-            
-            // Parallax effect for hero section
-            gsap.to('#hero-photo', {
-                y: -50,
-                scrollTrigger: {
-                    trigger: '#home',
-                    start: 'top top',
-                    end: 'bottom top',
-                    scrub: true
-                }
-            });
-            
-            // Animate cards on scroll
-            gsap.utils.toArray('.card-3d').forEach((card, i) => {
-                gsap.fromTo(card,
-                    {
-                        opacity: 0,
-                        y: 80,
-                        rotationY: -20
-                    },
-                    {
-                        opacity: 1,
-                        y: 0,
-                        rotationY: 0,
-                        duration: 0.8,
-                        delay: i * 0.1,
-                        ease: 'back.out(1.7)',
-                        scrollTrigger: {
-                            trigger: card,
-                            start: 'top 85%',
-                            toggleActions: 'play none none reverse'
-                        }
-                    }
-                );
-            });
-        }
-        
-        // Create floating particles
-        function createParticles() {
-            const container = document.getElementById('particles-container');
-            if (!container) return;
-            
-            const particleCount = 50;
-            
-            for (let i = 0; i < particleCount; i++) {
-                const particle = document.createElement('div');
-                particle.className = 'particle';
-                
-                const size = Math.random() * 4 + 2;
-                const startX = Math.random() * 100;
-                const delay = Math.random() * 20;
-                const duration = 15 + Math.random() * 10;
-                
-                particle.style.width = size + 'px';
-                particle.style.height = size + 'px';
-                particle.style.left = startX + '%';
-                particle.style.animationDelay = delay + 's';
-                particle.style.animationDuration = duration + 's';
-                
-                // Random color
-                const colors = [
-                    'rgba(10, 36, 99, 0.1)',
-                    'rgba(30, 64, 175, 0.1)',
-                    'rgba(4, 120, 87, 0.1)'
-                ];
-                particle.style.background = colors[Math.floor(Math.random() * colors.length)];
-                
-                container.appendChild(particle);
-            }
-        }
-        
-        // Magnetic effect for buttons and cards
-        function initMagneticEffect() {
-            const magneticElements = document.querySelectorAll('.magnetic, .btn-modern, .card-3d, .card-3d-hover');
-            
-            magneticElements.forEach(element => {
-                element.addEventListener('mousemove', (e) => {
-                    const rect = element.getBoundingClientRect();
-                    const x = e.clientX - rect.left - rect.width / 2;
-                    const y = e.clientY - rect.top - rect.height / 2;
-                    
-                    gsap.to(element, {
-                        x: x * 0.15,
-                        y: y * 0.15,
-                        duration: 0.3,
-                        ease: 'power2.out'
-                    });
                 });
-                
-                element.addEventListener('mouseleave', () => {
-                    gsap.to(element, {
-                        x: 0,
-                        y: 0,
-                        duration: 0.5,
-                        ease: 'elastic.out(1, 0.3)'
-                    });
-                });
-            });
+            };
+            
+            // Initial check
+            fadeInOnScroll();
+            
+            // Listen for scroll
+            window.addEventListener('scroll', fadeInOnScroll);
         }
         
-        // Add ripple effect to buttons
-        function initRippleEffect() {
-            const buttons = document.querySelectorAll('.btn-modern, button');
-            
-            buttons.forEach(button => {
-                button.addEventListener('click', function(e) {
-                    const ripple = document.createElement('span');
-                    const rect = this.getBoundingClientRect();
-                    const size = Math.max(rect.width, rect.height);
-                    const x = e.clientX - rect.left - size / 2;
-                    const y = e.clientY - rect.top - size / 2;
-                    
-                    ripple.style.width = ripple.style.height = size + 'px';
-                    ripple.style.left = x + 'px';
-                    ripple.style.top = y + 'px';
-                    ripple.classList.add('ripple');
-                    
-                    this.appendChild(ripple);
-                    
-                    setTimeout(() => {
-                        ripple.remove();
-                    }, 600);
-                });
-            });
-        }
-        
-        // 3D tilt effect for hexagon
-        function init3DTilt() {
-            const hexagon = document.querySelector('.hexagon-3d');
-            if (!hexagon) return;
-            
-            hexagon.addEventListener('mousemove', (e) => {
-                const rect = hexagon.getBoundingClientRect();
-                const x = e.clientX - rect.left;
-                const y = e.clientY - rect.top;
-                
-                const centerX = rect.width / 2;
-                const centerY = rect.height / 2;
-                
-                const rotateX = (y - centerY) / 10;
-                const rotateY = (centerX - x) / 10;
-                
-                gsap.to(hexagon, {
-                    rotationX: rotateX,
-                    rotationY: rotateY,
-                    transformPerspective: 1000,
-                    duration: 0.3,
-                    ease: 'power1.out'
-                });
-            });
-            
-            hexagon.addEventListener('mouseleave', () => {
-                gsap.to(hexagon, {
-                    rotationX: 0,
-                    rotationY: 0,
-                    duration: 0.5,
-                    ease: 'power2.out'
-                });
-            });
-        }
-        
-        // Animate navbar on scroll
-        function initNavbarAnimation() {
-            const navbar = document.querySelector('nav');
-            let lastScroll = 0;
-            
-            window.addEventListener('scroll', () => {
-                const currentScroll = window.pageYOffset;
-                
-                if (currentScroll > 100) {
-                    gsap.to(navbar, {
-                        backgroundColor: 'rgba(255, 255, 255, 0.95)',
-                        backdropFilter: 'blur(20px)',
-                        boxShadow: '0 4px 20px rgba(0, 0, 0, 0.1)',
-                        duration: 0.3
-                    });
-                } else {
-                    gsap.to(navbar, {
-                        backgroundColor: 'rgba(255, 255, 255, 0.9)',
-                        backdropFilter: 'blur(10px)',
-                        boxShadow: '0 2px 10px rgba(0, 0, 0, 0.05)',
-                        duration: 0.3
-                    });
-                }
-                
-                lastScroll = currentScroll;
-            });
-        }
-        
-        // Hero section entrance animation
-        function initHeroAnimation() {
-            const tl = gsap.timeline();
-            
-            tl.from('.hexagon', {
-                scale: 0,
-                rotation: -180,
-                opacity: 0,
-                duration: 1.2,
-                ease: 'back.out(1.7)'
-            })
-            .from('h1', {
-                y: 50,
-                opacity: 0,
-                duration: 0.8,
-                ease: 'power3.out'
-            }, '-=0.5')
-            .from('p', {
-                y: 30,
-                opacity: 0,
-                duration: 0.6,
-                ease: 'power2.out'
-            }, '-=0.3')
-            .from('.btn-modern', {
-                y: 20,
-                opacity: 0,
-                scale: 0.8,
-                duration: 0.5,
-                stagger: 0.1,
-                ease: 'back.out(1.7)'
-            }, '-=0.2');
-        }
-        
-        // Enhanced 3D Background with Three.js
+        // 3D Background with Three.js
         function init3DBackground() {
             const container = document.getElementById('three-container');
             if (!container) return;
             
-            // Scene setup
+            // Basic scene setup
             const scene = new THREE.Scene();
             const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
             const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
             
             renderer.setSize(window.innerWidth, window.innerHeight);
             renderer.setClearColor(0x000000, 0);
-            renderer.setPixelRatio(window.devicePixelRatio);
             container.appendChild(renderer.domElement);
             
-            // Create multiple 3D elements
-            const group = new THREE.Group();
-            
-            // Main icosahedron
-            const geometry1 = new THREE.IcosahedronGeometry(2, 1);
-            const material1 = new THREE.MeshPhongMaterial({ 
+            // Create abstract civic element
+            const geometry = new THREE.IcosahedronGeometry(2, 0);
+            const material = new THREE.MeshPhongMaterial({ 
                 color: 0x0A2463,
-                shininess: 50,
+                shininess: 30,
                 transparent: true,
-                opacity: 0.15,
-                wireframe: false
+                opacity: 0.1
             });
-            const mesh1 = new THREE.Mesh(geometry1, material1);
-            group.add(mesh1);
             
-            // Smaller orbiting elements
-            for (let i = 0; i < 5; i++) {
-                const geometry = new THREE.OctahedronGeometry(0.5, 0);
-                const material = new THREE.MeshPhongMaterial({
-                    color: i % 2 === 0 ? 0x047857 : 0x1E40AF,
-                    transparent: true,
-                    opacity: 0.2
-                });
-                const mesh = new THREE.Mesh(geometry, material);
-                const angle = (i / 5) * Math.PI * 2;
-                mesh.position.set(
-                    Math.cos(angle) * 3,
-                    Math.sin(angle) * 3,
-                    Math.sin(angle * 2) * 2
-                );
-                group.add(mesh);
-            }
+            const civicElement = new THREE.Mesh(geometry, material);
+            scene.add(civicElement);
             
-            scene.add(group);
-            
-            // Enhanced lighting
-            const ambientLight = new THREE.AmbientLight(0xffffff, 0.4);
+            // Add lights
+            const ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
             scene.add(ambientLight);
             
-            const directionalLight1 = new THREE.DirectionalLight(0xffffff, 0.6);
-            directionalLight1.position.set(5, 5, 5);
-            scene.add(directionalLight1);
+            const directionalLight = new THREE.DirectionalLight(0xffffff, 0.8);
+            directionalLight.position.set(5, 5, 5);
+            scene.add(directionalLight);
             
-            const directionalLight2 = new THREE.DirectionalLight(0x047857, 0.3);
-            directionalLight2.position.set(-5, -5, -5);
-            scene.add(directionalLight2);
+            // Position camera
+            camera.position.z = 5;
             
-            // Point light for dynamic effect
-            const pointLight = new THREE.PointLight(0x1E40AF, 0.5, 100);
-            pointLight.position.set(0, 0, 5);
-            scene.add(pointLight);
-            
-            camera.position.z = 6;
-            
-            // Mouse interaction
+            // Animation
             let mouseX = 0;
             let mouseY = 0;
-            let targetRotationX = 0;
-            let targetRotationY = 0;
             
             document.addEventListener('mousemove', (event) => {
                 mouseX = (event.clientX / window.innerWidth) * 2 - 1;
                 mouseY = -(event.clientY / window.innerHeight) * 2 + 1;
-                targetRotationX = mouseY * 0.5;
-                targetRotationY = mouseX * 0.5;
             });
             
-            // Animation loop
-            let time = 0;
             function animate() {
                 requestAnimationFrame(animate);
-                time += 0.01;
                 
-                // Smooth rotation towards mouse
-                group.rotation.x += (targetRotationX - group.rotation.x) * 0.05;
-                group.rotation.y += (targetRotationY - group.rotation.y) * 0.05;
+                // Rotate civic element
+                civicElement.rotation.x += 0.005;
+                civicElement.rotation.y += 0.005;
                 
-                // Continuous slow rotation
-                group.rotation.z += 0.002;
-                
-                // Animate orbiting elements
-                group.children.slice(1).forEach((child, i) => {
-                    const angle = (i / 5) * Math.PI * 2 + time;
-                    child.position.x = Math.cos(angle) * 3;
-                    child.position.y = Math.sin(angle) * 3;
-                    child.position.z = Math.sin(angle * 2) * 2;
-                    child.rotation.x += 0.02;
-                    child.rotation.y += 0.02;
-                });
-                
-                // Animate point light
-                pointLight.position.x = Math.sin(time) * 3;
-                pointLight.position.y = Math.cos(time) * 3;
+                // Add subtle movement based on mouse position
+                civicElement.rotation.x += mouseY * 0.001;
+                civicElement.rotation.y += mouseX * 0.001;
                 
                 renderer.render(scene, camera);
             }

@@ -236,7 +236,7 @@ function renderExperiences(experiences) {
         <button data-id="${exp.id}" class="del-exp ml-4 px-3 py-2 bg-red-500 text-white rounded-lg hover:bg-red-600 transition text-sm">
           <i class="fas fa-trash mr-1"></i>Delete
         </button>
-      </div>
+    </div>
     `;
     container.appendChild(el);
   });
@@ -257,13 +257,13 @@ async function addExperience() {
     return;
   }
   
-  const title = document.getElementById('exp-title').value.trim();
-  const period = document.getElementById('exp-period').value.trim();
-  const description = document.getElementById('exp-desc').value.trim();
+    const title = document.getElementById('exp-title').value.trim();
+    const period = document.getElementById('exp-period').value.trim();
+    const description = document.getElementById('exp-desc').value.trim();
   const descriptionOm = document.getElementById('exp-desc-om').value.trim();
   const descriptionAm = document.getElementById('exp-desc-am').value.trim();
   const tagsInput = document.getElementById('exp-tags').value.trim();
-  const imageFile = document.getElementById('exp-image').files[0];
+    const imageFile = document.getElementById('exp-image').files[0];
   
   if (!title) {
     showStatus('exp-status', 'Title is required', 'error');
@@ -412,12 +412,12 @@ async function addInitiative() {
     return;
   }
   
-  const title = document.getElementById('init-title').value.trim();
-  const description = document.getElementById('init-desc').value.trim();
+    const title = document.getElementById('init-title').value.trim();
+    const description = document.getElementById('init-desc').value.trim();
   const descriptionOm = document.getElementById('init-desc-om').value.trim();
   const descriptionAm = document.getElementById('init-desc-am').value.trim();
   const impact = document.getElementById('init-impact').value.trim();
-  const imageFile = document.getElementById('init-image').files[0];
+    const imageFile = document.getElementById('init-image').files[0];
   
   if (!title) {
     showStatus('init-status', 'Title is required', 'error');
