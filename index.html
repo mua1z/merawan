@@ -44,18 +44,18 @@
         }
         
         .section-padding {
-            padding: 5rem 1.5rem;
+            padding: 3.5rem 1.25rem;
         }
         
         @media (min-width: 768px) {
             .section-padding {
-                padding: 6rem 3rem;
+                padding: 5rem 2rem;
             }
         }
         
         @media (min-width: 1024px) {
             .section-padding {
-                padding: 8rem 5rem;
+                padding: 7rem 4rem;
             }
         }
         
@@ -63,6 +63,8 @@
         .card-3d {
             transition: transform 0.5s ease, box-shadow 0.5s ease;
             transform-style: preserve-3d;
+            will-change: transform;
+            touch-action: pan-y;
         }
         
         .card-3d:hover {
@@ -165,6 +167,13 @@
             background-size: cover;
         }
         
+        @media (max-width: 1023px) {
+            .parallax-bg {
+                background-attachment: scroll;
+                background-position: center top;
+            }
+        }
+        
         /* Animation Classes */
         .fade-in {
             opacity: 0;
@@ -185,13 +194,43 @@
             width: 100%;
             height: 100%;
             z-index: -1;
+            pointer-events: none;
+        }
+        
+        #three-container canvas {
+            width: 100% !important;
+            height: 100% !important;
+        }
+        
+        button,
+        a {
+            touch-action: manipulation;
+        }
+        
+        @media (max-width: 767px) {
+            .timeline-item {
+                padding-left: 1.25rem;
+            }
+            
+            .timeline-item::before {
+                left: 2px;
+            }
+            
+            .timeline-dot {
+                left: -4px;
+            }
+            
+            .card-3d:hover {
+                transform: none;
+                box-shadow: none;
+            }
         }
     </style>
 </head>
 <body class="bg-white">
     <!-- Navigation -->
     <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md shadow-sm">
-        <div class="container mx-auto px-6 py-4">
+        <div class="container mx-auto px-4 sm:px-6 py-4">
             <div class="flex justify-between items-center">
                 <!-- Logo/Brand -->
                 <div class="text-xl font-bold text-blue-900">Merawan Mohammed</div>
@@ -360,9 +399,9 @@
                     <div class="relative">
                         <!-- Placeholder for official portrait -->
                         <div class="bg-gradient-to-br from-blue-100 to-green-100 rounded-2xl overflow-hidden shadow-2xl">
-                            <div class="h-96 flex items-center justify-center">
+                            <div class="h-72 sm:h-80 md:h-96 flex items-center justify-center">
                                 <div class="text-center">
-                                    <div class="w-48 h-48 rounded-full mx-auto mb-6 overflow-hidden shadow-2xl ring-4 ring-blue-200 transform transition duration-500 hover:rotate-1 hover:scale-105">
+                                    <div class="w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 rounded-full mx-auto mb-6 overflow-hidden shadow-2xl ring-4 ring-blue-200 transform transition duration-500 hover:rotate-1 hover:scale-105">
     <img 
         src="/images/merwan-photo.jpg"
         alt="Merawan Mohammed Official Portrait"
@@ -1110,6 +1149,7 @@
             const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
             
             renderer.setSize(window.innerWidth, window.innerHeight);
+            renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
             renderer.setClearColor(0x000000, 0);
             container.appendChild(renderer.domElement);
             
@@ -1160,36 +1200,52 @@
             }
             
             // Handle window resize
-            window.addEventListener('resize', () => {
+            const handleResize = () => {
                 camera.aspect = window.innerWidth / window.innerHeight;
                 camera.updateProjectionMatrix();
                 renderer.setSize(window.innerWidth, window.innerHeight);
-            });
+                renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
+            };
+            
+            window.addEventListener('resize', handleResize, { passive: true });
             
             // Start animation
             animate();
         }
         
-        // Card tilt effect
-        document.querySelectorAll('.card-3d').forEach(card => {
-            card.addEventListener('mousemove', (e) => {
+        // Card tilt effect (pointer + touch friendly, respects reduced motion)
+        (() => {
+            const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+            if (prefersReducedMotion) return;
+            
+            const applyTilt = (card, clientX, clientY) => {
                 const rect = card.getBoundingClientRect();
-                const x = e.clientX - rect.left;
-                const y = e.clientY - rect.top;
-                
+                const x = clientX - rect.left;
+                const y = clientY - rect.top;
                 const centerX = rect.width / 2;
                 const centerY = rect.height / 2;
-                
                 const rotateY = (x - centerX) / 25;
                 const rotateX = (centerY - y) / 25;
-                
                 card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-10px)`;
-            });
+            };
             
-            card.addEventListener('mouseleave', () => {
+            const resetTilt = (card) => {
                 card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) translateY(0)';
+            };
+            
+            document.querySelectorAll('.card-3d').forEach(card => {
+                const handlePointerMove = (e) => {
+                    const { clientX, clientY } = e.touches ? e.touches[0] : e;
+                    applyTilt(card, clientX, clientY);
+                };
+                
+                card.addEventListener('pointermove', handlePointerMove);
+                card.addEventListener('pointerdown', handlePointerMove);
+                card.addEventListener('pointerleave', () => resetTilt(card));
+                card.addEventListener('pointerup', () => resetTilt(card));
+                card.addEventListener('pointercancel', () => resetTilt(card));
             });
-        });
+        })();
     </script>
 </body>
 </html>
